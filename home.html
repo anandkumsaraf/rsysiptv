@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" onclick='MovieRental()'>Movie Rental</a>
+  <a href="#" onclick='VODSubscription()'>VOD Subscription</a>
+  <a href="#" onclick='TrendingChannels()'>Trending Channels</a>
+  <a href="#" onclick='TwitterSentimentsDaily()'>Twitter Sentiments (Daily)</a>
+  <a href="#" onclick='TwitterSentimentsHourly()'>Twitter Sentiments (Hourly)</a>
+  <a href="#" onclick='ActiveSubscribers()'>Active Subscribers</a>
+  <a href="#" onclick='ActiveSubscribersChannelWise()'>Active Subscribers(Channel Wise)</a>
+  <a href="#" onclick='ProgramViewershipPattern()'>Program Viewership Pattern</a>
+  <a href="#" onclick='ChannelViewershipPattern()'>Channel Viewership Pattern</a>
+  <a href="#" onclick='ChannelViewershipWithProgram()'>Channel Viewership Pattern(Program Wise)</a>
+  <a href="#" onclick='ErrorPattern()'>Error Pattern</a>
+  <a href="#" onclick='nPVRError()'>nPVRError</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801 RSI IPTV Analytics</span>
+
+<div id="main" class="maindiv">
+    <iframe id="iframe" class="iframe" 	scrolling="no" src="">
+    </iframe>
+</div>
+
+
+<script type='text/javascript'>
+
+/* Set the MovieRental from public Tableau server to iframe */
+function MovieRental()
+{
+    document.getElementById("iframe").src = "MovieRental.html";
+}
+
+/* Set the VODSubscription from public Tableau server to iframe */
+function VODSubscription()
+{
+    document.getElementById("iframe").src = "VODSubscriptions.html";
+}
+
+/* Set the TrendingChannels from public Tableau server to iframe */
+function TrendingChannels()
+{
+    document.getElementById("iframe").src = "TopViewedChannel.html";
+}
+
+/* Set the TwitterSentimentsDaily from public Tableau server to iframe */
+function TwitterSentimentsDaily()
+{
+    document.getElementById("iframe").src = "TwitterSentimentsDaywise.html";
+}
+
+/* Set the TwitterSentimentsHourly from public Tableau server to iframe */
+function TwitterSentimentsHourly()
+{
+    document.getElementById("iframe").src = "TwitterSentimentsHourly.html";
+}
+
+/* Set the ActiveSubscribers from public Tableau server to iframe */
+function ActiveSubscribers()
+{
+    document.getElementById("iframe").src = "ActiveSubscribers.html";
+}
+
+/* Set the ActiveSubscribersChannelWise from public Tableau server to iframe */
+function ActiveSubscribersChannelWise()
+{
+    document.getElementById("iframe").src = "ActiveSubscribersChannelWise.html";
+}
+
+/* Set the ProgramViewershipPattern from public Tableau server to iframe */
+function ProgramViewershipPattern()
+{
+    document.getElementById("iframe").src = "ProgramViewershipPattern.html";
+}
+
+/* Set the ChannelViewershipPattern from public Tableau server to iframe */
+function ChannelViewershipPattern()
+{
+    document.getElementById("iframe").src = "ChannelViewershipPattern.html";
+}
+
+/* Set the ChannelViewershipWithProgram from public Tableau server to iframe */
+function ChannelViewershipWithProgram()
+{
+    document.getElementById("iframe").src = "Channelviewershipwithprogram.html";
+}
+
+/* Set the ErrorPattern from public Tableau server to iframe */
+function ErrorPattern()
+{
+    document.getElementById("iframe").src = "ErrorPattern";
+}
+
+/* Set the nPVRError from public Tableau server to iframe */
+function nPVRError()
+{
+    document.getElementById("iframe").src = "nPVRError.html";
+}
+
+
+/* Set the width of the side navigation to 400px and the left margin of the page content to 400px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+</body>
+</html>
